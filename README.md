@@ -1,14 +1,13 @@
-# TicTacToe - A React App With Hooks
+# TicTacToe - A React App With Hooks - Done Without create-react-app
 
-This was done with an aim to learn the react code setup from scratch (without using create-react-app) and to play with hooks (React's new feature).
+This was done with an aim to learn the react code setup (along with babel and webpack) from scratch (without using create-react-app) and to experiment with hooks (React's new feature).
 
-The initial code for TicTacToe was copied from this [codepen](https://codepen.io/gaearon/pen/oWWQNa). It was then modified to make use of hooks.
-
+The tic-tac-toe code was referenced from this [codepen](https://codepen.io/gaearon/pen/oWWQNa).
 ## Minimalist React Setup
 
 ```bash
-mkdir tictactoe
-cd tictactoe
+mkdir tic-tac-toe
+cd tic-tac-toe
 npm init --y
 ```
 This will get us going with basic configuration and scaffolding for our Node project.
@@ -31,6 +30,36 @@ What will each one of this do?
 `@babel/preset-env`: group of commonly used Babel plugins bundled into a preset that converts modern JavaScript features into widely compatible syntax
 `@babel/preset-react`: React-specific Babel plugins that convert JSX syntax into plain old JavaScript that browsers can understand
 
+## What Are We Doing With Hooks?
+```javascript
+this.state = {
+      history: [
+        {
+          squares: Array(9).fill(null)
+        }
+      ],
+      stepNumber: 0,
+      xIsNext: true
+    };
+```
+This when re-written with hooks will look like following
+```javascript
+import React, { useState } from 'react';
+
+export function Game(props) {
+
+    const [stepNumber, setStepNumber] = useState(0);
+    const [xIsNext, toggleNextPlayer] = useState(true);
+    const [history, updateHistory] = useState([{ squares: Array(9).fill(null) }]);
+.
+.
+.
+}
+```
+
+There are three states here: `stepNumber`, `xIsNext` and `history` which are initialised with numeral `0`, boolean `true` and an array respectively.
+
+
 
 ## License
-[GPL](https://www.gnu.org/licenses/gpl-3.0.html)
+[GPL](LICENSE)
