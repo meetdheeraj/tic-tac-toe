@@ -27,7 +27,7 @@ What will each one of this do?
 `html-webpack-plugin`: an extension to webpack that adds the basic index html file\
 `@babel/core`: a JavaScript transpiler to converts modern JavaScript into a production-ready version that's compatible with all browsers.\
 `babel-loader`: connects Babel to webpack's build process\
-`@babel/preset-env`: group of commonly used Babel plugins bundled into a preset that converts modern JavaScript features into widely compatible syntax
+`@babel/preset-env`: group of commonly used Babel plugins bundled into a preset that converts modern JavaScript features into widely compatible syntax\
 `@babel/preset-react`: React-specific Babel plugins that convert JSX syntax into plain old JavaScript that browsers can understand
 
 ## What Are We Doing With Hooks?
